@@ -1,0 +1,106 @@
+{
+    "identity": {
+        "name": "Akash Kharat",
+        "github": "A2K12",
+        "experienceYears": "4.6+",
+        "focus": "Full-Stack Engineer | Microservices, IoT, & Enterprise Cloud Orchestration",
+        "email": "akashkharat1212@gmail.com",
+        "phone": "+91 7083917887",
+        "linkedin": "linkedin.com/in/akash-kharat"
+    },
+    "education": [
+        {
+            "degree": "Bachelor of Technology in Computer Science",
+            "school": "Dr. Babasaheb Ambedkar Technological University, Lonere",
+            "period": "2018 - 2021"
+        },
+        {
+            "degree": "Diploma in Computer Engineering",
+            "school": "MSBTE Board",
+            "period": "2014 - 2018"
+        }
+    ],
+    "experience": [
+        {
+            "id": 1,
+            "company": "Ksolves India LTD",
+            "role": "Senior Software Engineer",
+            "period": "Aug. 2021 - Present",
+            "description": "Spearheaded legacy migration and architected resilient Microservices/IoT solutions.",
+            "achievements": [
+                "Modernized legacy PHP and Node.js monoliths to a scalable NestJS and Next.js architecture.",
+                "Engineered IoT solutions with Tuya IoT integrations for real-time data processing.",
+                "Developed robust RESTful APIs using Node.js and PostgreSQL, optimizing schemas for high-volume traffic.",
+                "Orchestrated containerized deployments using Docker on AWS serverless infrastructure.",
+                "Built dynamic, responsive web interfaces using React.js and Redux within MERN/PERN stack."
+            ],
+            "tech": [
+                "NestJS",
+                "Next.js",
+                "Docker",
+                "AWS",
+                "Tuya IoT",
+                "MQTT",
+                "PostgreSQL",
+                "Redis",
+                "React",
+                "Redux"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Smart Hotel PMS Modernization",
+            "type": "Featured | IoT / Microservices",
+            "challenge": "Architectural migration of a legacy monolithic PHP/Node.js codebase to scalable Microservices.",
+            "solution": "Integrated Tuya IoT OpenAPI and MQTT protocols for real-time automation of room scenes.",
+            "win": "Optimized MySQL schema to handle high-frequency IoT logs, improving response time by 25%.",
+            "tech": [
+                "NestJS",
+                "Next.js",
+                "Tuya IoT",
+                "MQTT",
+                "Redis",
+                "Tailwind CSS"
+            ],
+            "hasDemo": true,
+            "snippet": "const roomStatus = await this.redis.get(`room:${id}:status`);\nif (!roomStatus) {\n  const telemetry = await this.telemetryModel.findOne({ where: { roomId: id }, order: [['createdAt', 'DESC']] });\n  // ... optimization logic\n}"
+        },
+        {
+            "id": 2,
+            "title": "Multi-Tenant SaaS CRM Platform",
+            "type": "Enterprise SaaS",
+            "challenge": "Engineering a multi-tenant system with strict data isolation and regional flexibility.",
+            "solution": "Implemented dynamic Localization modules and optimized API layers for concurrent enterprise clients.",
+            "win": "Created reusable utility functions and conducted code reviews, ensuring scalable architecture.",
+            "tech": [
+                "Node.js",
+                "React.js",
+                "PostgreSQL",
+                "TypeScript",
+                "Sequelize"
+            ],
+            "hasDemo": false,
+            "snippet": ""
+        },
+        {
+            "id": 3,
+            "title": "Role-Based Lead Management System",
+            "type": "Real-time Communication",
+            "challenge": "Centralizing fragmented SMS/Email/Push channels into a high-availability hub.",
+            "solution": "Integrated Twilio, SendGrid, and FCM. Orchestrated containerization using Docker.",
+            "win": "Delivered real-time push notifications for critical updates using FCM and optimized Sequelize queries.",
+            "tech": [
+                "Docker",
+                "AWS",
+                "Twilio",
+                "SendGrid",
+                "FCM",
+                "Sequelize"
+            ],
+            "hasDemo": false,
+            "snippet": ""
+        }
+    ]
+}
