@@ -7,4 +7,5 @@ const nextConfig: NextConfig = {
   },
 };
 
+// Final deployment configuration
 export default nextConfig;
