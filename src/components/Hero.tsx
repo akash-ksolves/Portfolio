@@ -50,6 +50,7 @@ const Hero = () => {
                         </Link>
                         <a
                             href="/Akash_Resume.pdf"
+                            download="Akash_Kharat_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="glass-panel text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center border border-white/10 hover:border-white/20 transition-all gap-2"
