@@ -4,23 +4,10 @@ import { motion } from 'framer-motion';
 import SectionHeader from './ui/SectionHeader';
 import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 
+import { usePortfolioData } from '@/hooks/usePortfolioData';
+
 const ExperienceTimeline = () => {
-    const experiences = [
-        {
-            company: "Ksolves India LTD",
-            role: "Senior Software Engineer",
-            period: "Aug. 2021 - Present",
-            description: "Spearheaded legacy migration and architected resilient Microservices/IoT solutions with a focus on high-performance cloud ecosystems.",
-            achievements: [
-                "Spearheaded Legacy Migration: Led the full-stack modernization of legacy PHP and Node.js monoliths to a scalable NestJS architecture.",
-                "Microservices & IoT Architecture: Designed and deployed resilient solutions with Tuya IoT integrations enabling real-time processing.",
-                "High-Performance Backend: Developed robust RESTful APIs using Node.js and PostgreSQL, optimizing schemas for high-volume traffic.",
-                "Cloud & DevOps: Orchestrated containerized deployments using Docker on AWS, ensuring 99.9% uptime and reproducible environments.",
-                "Full-Stack Implementation: Built dynamic web interfaces using React.js and Redux within the MERN/PERN stack."
-            ],
-            tech: ["NestJS", "Node.js", "Docker", "AWS", "Tuya IoT", "MQTT", "PostgreSQL", "Redis", "React", "Redux"]
-        }
-    ];
+    const { experience } = usePortfolioData();
 
     return (
         <section id="experience" className="py-20 px-4">
@@ -32,7 +19,7 @@ const ExperienceTimeline = () => {
                 />
 
                 <div className="space-y-12">
-                    {experiences.map((exp, index) => (
+                    {experience.map((exp, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}

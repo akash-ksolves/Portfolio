@@ -12,10 +12,12 @@ const outfit = Outfit({
   subsets: ["latin"],
 });
 
+import mockData from "@/data/mockData.json";
+
 export const metadata: Metadata = {
-  title: "Akash Kharat | Senior Systems Architect | NestJS & IoT Expert",
-  description: "Senior Software Engineer with 4.6 years of experience in Microservices, IoT Architecture, and Enterprise Cloud Orchestration. Specializing in NestJS, Next.js, and Docker.",
-  keywords: ["NestJS Architect", "IoT Integrator", "Senior Node.js Developer", "Microservices Expert", "Akash Kharat Portfolio"],
+  title: mockData.metadata.title,
+  description: mockData.metadata.description,
+  keywords: mockData.metadata.keywords,
 };
 
 export default function RootLayout({

@@ -1,23 +1,156 @@
 {
     "identity": {
-        "name": "Akash Kharat",
-        "github": "A2K12",
+        "first_name": "Akash",
+        "last_name": "Kharat",
+        "full_name": "Akash Kharat",
         "experienceYears": "4.6+",
         "focus": "Full-Stack Engineer | Microservices, IoT, & Enterprise Cloud Orchestration",
         "email": "akashkharat1212@gmail.com",
         "phone": "+91 7083917887",
-        "linkedin": "linkedin.com/in/akash-kharat-58949a135"
+        "linkedin": "linkedin.com/in/akash-kharat-58949a135",
+        "github": "A2K12",
+        "location": "Pune, Maharashtra, India"
     },
+    "socials": {
+        "github": "https://github.com/A2K12",
+        "linkedin": "https://linkedin.com/in/akash-kharat-58949a135",
+        "email": "mailto:akashkharat1212@gmail.com",
+        "phone": "tel:+917083917887"
+    },
+    "navLinks": [
+        {
+            "name": "Experience",
+            "href": "#experience"
+        },
+        {
+            "name": "Projects",
+            "href": "#projects"
+        },
+        {
+            "name": "Skills",
+            "href": "#skills"
+        },
+        {
+            "name": "Education",
+            "href": "#education"
+        }
+    ],
+    "hero": {
+        "techKeywords": [
+            "Event-Driven Architecture",
+            "IoT Microservices",
+            "Cloud Native",
+            "NestJS Expert",
+            "Enterprise SaaS"
+        ],
+        "resumeUrl": "/Akash_Resume.pdf",
+        "resumeFilename": "Akash_Kharat_Resume.pdf"
+    },
+    "metadata": {
+        "title": "Akash Kharat | Senior Systems Architect | NestJS & IoT Expert",
+        "description": "Senior Software Engineer with 4.6 years of experience in Microservices, IoT Architecture, and Enterprise Cloud Orchestration. Specializing in NestJS, Next.js, and Docker.",
+        "keywords": [
+            "NestJS Architect",
+            "IoT Integrator",
+            "Senior Node.js Developer",
+            "Microservices Expert",
+            "Akash Kharat Portfolio"
+        ]
+    },
+    "skills": [
+        {
+            "name": "Backend & Orchestration",
+            "icon": "Layers",
+            "color": "text-industrial-blue",
+            "skills": [
+                "NestJS",
+                "Express.js",
+                "Docker",
+                "AWS (Serverless/EC2)",
+                "Sequelize ORM"
+            ]
+        },
+        {
+            "name": "IoT & Integration",
+            "icon": "Cpu",
+            "color": "text-cyber-cyan",
+            "skills": [
+                "Tuya Cloud Platform",
+                "MQTT",
+                "Webhooks",
+                "Redis",
+                "Real-time Data"
+            ]
+        },
+        {
+            "name": "Frontend & UI",
+            "icon": "Globe",
+            "color": "text-cyber-mint",
+            "skills": [
+                "React.js",
+                "Next.js",
+                "Redux",
+                "Tailwind CSS",
+                "Framer Motion"
+            ]
+        },
+        {
+            "name": "Runtime & Data",
+            "icon": "Database",
+            "color": "text-amber-500",
+            "skills": [
+                "Node.js",
+                "TypeScript",
+                "JavaScript (ES6+)",
+                "PostgreSQL",
+                "MySQL"
+            ]
+        }
+    ],
+    "systemMetrics": [
+        {
+            "label": "Latency",
+            "value": "14ms",
+            "sub": "gRPC Internal",
+            "color": "text-cyber-cyan"
+        },
+        {
+            "label": "Throughput",
+            "value": "50k+",
+            "sub": "MQTT/Sec",
+            "color": "text-cyber-mint"
+        },
+        {
+            "label": "Availability",
+            "value": "99.9%",
+            "sub": "Multi-Region",
+            "color": "text-industrial-blue"
+        },
+        {
+            "label": "Security",
+            "value": "SSO/IAM",
+            "sub": "Azure AD Sink",
+            "color": "text-amber-500"
+        },
+        {
+            "label": "Channels",
+            "value": "Hybrid",
+            "sub": "SMS+Push+Email",
+            "color": "text-purple-400"
+        }
+    ],
     "education": [
         {
             "degree": "Bachelor of Technology in Computer Science",
             "school": "Dr. Babasaheb Ambedkar Technological University, Lonere",
-            "period": "2018 - 2021"
+            "period": "2018 - 2021",
+            "details": "Specialized in Computer Science & Engineering. DBATU University merit holder."
         },
         {
             "degree": "Diploma in Computer Engineering",
             "school": "MSBTE Board",
-            "period": "2014 - 2018"
+            "period": "2014 - 2018",
+            "details": "Foundation in Computer Engineering and Software Fundamentals."
         }
     ],
     "experience": [
@@ -26,13 +159,13 @@
             "company": "Ksolves India LTD",
             "role": "Senior Software Engineer",
             "period": "Aug. 2021 - Present",
-            "description": "Spearheaded legacy migration and architected resilient Microservices/IoT solutions.",
+            "description": "Spearheaded legacy migration and architected resilient Microservices/IoT solutions with a focus on high-performance cloud ecosystems.",
             "achievements": [
-                "Modernized legacy PHP and Node.js monoliths to a scalable NestJS and Next.js architecture.",
-                "Engineered IoT solutions with Tuya IoT integrations for real-time data processing.",
-                "Developed robust RESTful APIs using Node.js and PostgreSQL, optimizing schemas for high-volume traffic.",
-                "Orchestrated containerized deployments using Docker on AWS serverless infrastructure.",
-                "Built dynamic, responsive web interfaces using React.js and Redux within MERN/PERN stack."
+                "Spearheaded Legacy Migration: Led the full-stack modernization of legacy PHP and Node.js monoliths to a scalable NestJS architecture.",
+                "Microservices & IoT Architecture: Designed and deployed resilient solutions with Tuya IoT integrations enabling real-time processing.",
+                "High-Performance Backend: Developed robust RESTful APIs using Node.js and PostgreSQL, optimizing schemas for high-volume traffic.",
+                "Cloud & DevOps: Orchestrated containerized deployments using Docker on AWS, ensuring 99.9% uptime and reproducible environments.",
+                "Full-Stack Implementation: Built dynamic web interfaces using React.js and Redux within the MERN/PERN stack."
             ],
             "tech": [
                 "NestJS",

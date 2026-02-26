@@ -4,21 +4,10 @@ import { motion } from 'framer-motion';
 import SectionHeader from './ui/SectionHeader';
 import { GraduationCap, Award } from 'lucide-react';
 
+import { usePortfolioData } from '@/hooks/usePortfolioData';
+
 const Education = () => {
-    const education = [
-        {
-            degree: "Bachelor of Technology in Computer Science",
-            school: "Dr. Babasaheb Ambedkar Technological University, Lonere",
-            period: "2018 - 2021",
-            details: "Specialized in Computer Science & Engineering. DBATU University merit holder."
-        },
-        {
-            degree: "Diploma in Computer Engineering",
-            school: "MSBTE Board",
-            period: "2014 - 2018",
-            details: "Foundation in Computer Engineering and Software Fundamentals."
-        }
-    ];
+    const { education } = usePortfolioData();
 
     return (
         <section id="education" className="py-20 px-4">

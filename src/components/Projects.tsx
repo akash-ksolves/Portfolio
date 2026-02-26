@@ -4,14 +4,15 @@ import { useState, useEffect } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import SectionHeader from './ui/SectionHeader';
-import mockData from '../data/mockData.json';
+import { usePortfolioData } from '@/hooks/usePortfolioData';
 
 const Projects = () => {
+    const { projects } = usePortfolioData();
     const controls = useAnimationControls();
     const [isHovered, setIsHovered] = useState(false);
 
     // Triple the projects for even smoother infinite loop on large screens
-    const displayProjects = [...mockData.projects, ...mockData.projects, ...mockData.projects];
+    const displayProjects = [...projects, ...projects, ...projects];
 
     useEffect(() => {
         const startAnimation = async () => {

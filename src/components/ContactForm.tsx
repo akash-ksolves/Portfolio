@@ -6,7 +6,10 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 import { useState } from 'react';
 
+import { usePortfolioData } from '@/hooks/usePortfolioData';
+
 const ContactForm = () => {
+    const { identity, socials } = usePortfolioData();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
@@ -54,8 +57,8 @@ const ContactForm = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/40 text-xs uppercase font-mono mb-1">Email</p>
-                                    <a href="mailto:akashkharat1212@gmail.com" className="text-lg font-medium hover:text-industrial-blue transition-colors">
-                                        akashkharat1212@gmail.com
+                                    <a href={socials.email} className="text-lg font-medium hover:text-industrial-blue transition-colors">
+                                        {identity.email}
                                     </a>
                                 </div>
                             </div>
@@ -66,8 +69,8 @@ const ContactForm = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/40 text-xs uppercase font-mono mb-1">Phone</p>
-                                    <a href="tel:+917083917887" className="text-lg font-medium hover:text-industrial-blue transition-colors">
-                                        +91 7083917887
+                                    <a href={socials.phone} className="text-lg font-medium hover:text-industrial-blue transition-colors">
+                                        {identity.phone}
                                     </a>
                                 </div>
                             </div>
@@ -78,7 +81,7 @@ const ContactForm = () => {
                                 </div>
                                 <div>
                                     <p className="text-white/40 text-xs uppercase font-mono mb-1">Location</p>
-                                    <p className="text-lg font-medium">Pune, Maharashtra, India</p>
+                                    <p className="text-lg font-medium">{identity.location}</p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +118,7 @@ const ContactForm = () => {
                                             name="name"
                                             required
                                             type="text"
-                                            placeholder="Akash Kharat"
+                                            placeholder={identity.full_name}
                                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-industrial-blue transition-colors"
                                         />
                                     </div>

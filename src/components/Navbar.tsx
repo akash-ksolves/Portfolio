@@ -5,15 +5,11 @@ import { Linkedin, Github, Mail, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+import { usePortfolioData } from '@/hooks/usePortfolioData';
 
-    const navLinks = [
-        { name: 'Experience', href: '#experience' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Education', href: '#education' },
-    ];
+const Navbar = () => {
+    const { identity, navLinks, socials } = usePortfolioData();
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <nav className="fixed top-0 w-full z-50 glass-panel border-b border-white/10">
@@ -21,8 +17,8 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
                         <Link href="/" className="font-display font-bold text-xl tracking-tighter flex items-center gap-2">
-                            <span className="text-industrial-blue">AKASH</span>
-                            <span className="text-white/50">KHARAT</span>
+                            <span className="text-industrial-blue">{identity.first_name.toUpperCase()}</span>
+                            <span className="text-white/50">{identity.last_name.toUpperCase()}</span>
                         </Link>
                     </div>
 
@@ -41,10 +37,10 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-4">
-                        <a href="https://linkedin.com/in/akash-kharat" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors">
+                        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors">
                             <Linkedin size={20} />
                         </a>
-                        <a href="https://github.com/A2K12" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors">
+                        <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors">
                             <Github size={20} />
                         </a>
                         <Link href="#contact" className="bg-industrial-blue/10 border border-industrial-blue text-industrial-blue px-4 py-1.5 rounded-md text-sm font-medium hover:bg-industrial-blue hover:text-white transition-all">
@@ -80,10 +76,10 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <div className="flex items-center space-x-4 px-3 py-2">
-                                <a href="https://linkedin.com/in/akash-kharat-58949a135" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
+                                <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
                                     <Linkedin size={20} />
                                 </a>
-                                <a href="https://github.com/A2K12" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
+                                <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
                                     <Github size={20} />
                                 </a>
                             </div>

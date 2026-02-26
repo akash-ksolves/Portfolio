@@ -5,9 +5,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Terminal } from 'lucide-react';
 import Link from 'next/link';
 
+import { usePortfolioData } from '@/hooks/usePortfolioData';
+
 const Hero = () => {
-    const techKeywords = ['Event-Driven Architecture', 'IoT Microservices', 'Cloud Native', 'NestJS Expert', 'Enterprise SaaS'];
-    const typedText = useTypingEffect(techKeywords);
+    const { identity, hero } = usePortfolioData();
+    const typedText = useTypingEffect(hero.techKeywords);
 
     return (
         <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden">
@@ -27,7 +29,7 @@ const Hero = () => {
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
-                        Akash Kharat <br />
+                        {identity.full_name} <br />
                         <span className="text-white/40">Full Stack</span> Developer
                     </h1>
 
@@ -38,7 +40,7 @@ const Hero = () => {
                     </div>
 
                     <p className="text-lg md:text-xl text-white/70 leading-relaxed mb-10 max-w-2xl">
-                        High-performance Full Stack Developer with <span className="text-white font-semibold">4.6+ years</span> of specialized experience in
+                        High-performance Full Stack Developer with <span className="text-white font-semibold">{identity.experienceYears}</span> of specialized experience in
                         <span className="text-white font-semibold"> Microservices, IoT, and Enterprise Cloud Orchestration</span>.
                         Proven track record in spearheading the modernization of legacy monoliths into resilient, event-driven ecosystems.
                     </p>
@@ -49,8 +51,8 @@ const Hero = () => {
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
                         <a
-                            href="/Akash_Resume.pdf"
-                            download="Akash_Kharat_Resume.pdf"
+                            href={hero.resumeUrl}
+                            download={hero.resumeFilename}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="glass-panel text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center border border-white/10 hover:border-white/20 transition-all gap-2"

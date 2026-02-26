@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import SectionHeader from './ui/SectionHeader';
+import { usePortfolioData } from '@/hooks/usePortfolioData';
 
 const SystemArchitecture = () => {
+    const { systemMetrics } = usePortfolioData();
     return (
         <section className="py-20 px-4 bg-white/[0.01]">
             <div className="max-w-7xl mx-auto">
@@ -117,13 +119,7 @@ const SystemArchitecture = () => {
 
                     {/* Technical Specification Badges */}
                     <div className="mt-12 grid grid-cols-2 lg:grid-cols-5 gap-4">
-                        {[
-                            { label: 'Latency', value: '14ms', sub: 'gRPC Internal', color: 'text-cyber-cyan' },
-                            { label: 'Throughput', value: '50k+', sub: 'MQTT/Sec', color: 'text-cyber-mint' },
-                            { label: 'Availability', value: '99.9%', sub: 'Multi-Region', color: 'text-industrial-blue' },
-                            { label: 'Security', value: 'SSO/IAM', sub: 'Azure AD Sink', color: 'text-amber-500' },
-                            { label: 'Channels', value: 'Hybrid', sub: 'SMS+Push+Email', color: 'text-purple-400' }
-                        ].map((spec) => (
+                        {systemMetrics.map((spec: any) => (
                             <div key={spec.label} className="flex flex-col items-center bg-white/5 p-4 rounded-xl border border-white/5 hover:border-white/10 transition-colors">
                                 <div className={`text-xl md:text-2xl font-bold font-mono ${spec.color} mb-1`}>
                                     {spec.value}
