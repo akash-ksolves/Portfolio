@@ -37,11 +37,14 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-4">
-                        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors">
+                        <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors" title="LinkedIn">
                             <Linkedin size={20} />
                         </a>
-                        <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors">
+                        <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors" title="GitHub">
                             <Github size={20} />
+                        </a>
+                        <a href={`mailto:${socials.gmail}`} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue transition-colors" title="Gmail">
+                            <Mail size={20} />
                         </a>
                         <Link href="#contact" className="bg-industrial-blue/10 border border-industrial-blue text-industrial-blue px-4 py-1.5 rounded-md text-sm font-medium hover:bg-industrial-blue hover:text-white transition-all">
                             Contact Me
@@ -75,12 +78,15 @@ const Navbar = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <div className="flex items-center space-x-4 px-3 py-2">
+                            <div className="flex items-center space-x-4 px-3 py-2 border-t border-white/5 mt-2">
                                 <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
                                     <Linkedin size={20} />
                                 </a>
                                 <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
                                     <Github size={20} />
+                                </a>
+                                <a href={`mailto:${socials.gmail}`} target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-industrial-blue">
+                                    <Mail size={20} />
                                 </a>
                             </div>
                         </div>

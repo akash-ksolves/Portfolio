@@ -15,6 +15,7 @@
         "github": "https://github.com/A2K12",
         "linkedin": "https://linkedin.com/in/akash-kharat-58949a135",
         "email": "mailto:akashkharat1212@gmail.com",
+        "gmail": "akashkharat1212@gmail.com",
         "phone": "tel:+917083917887"
     },
     "navLinks": [
@@ -25,6 +26,10 @@
         {
             "name": "Projects",
             "href": "#projects"
+        },
+        {
+            "name": "Awards",
+            "href": "#awards"
         },
         {
             "name": "Skills",
@@ -43,7 +48,7 @@
             "NestJS Expert",
             "Enterprise SaaS"
         ],
-        "resumeUrl": "/Akash_Resume.pdf",
+        "resumeUrl": "/Portfolio/Akash_Kharat_Resume.pdf",
         "resumeFilename": "Akash_Kharat_Resume.pdf"
     },
     "metadata": {
@@ -139,6 +144,32 @@
             "color": "text-purple-400"
         }
     ],
+    "awards": [
+        {
+            "id": 1,
+            "title": "Star Performer Award",
+            "issuer": "Ksolves India LTD",
+            "date": "JUNE-2022",
+            "description": "Awarded for excellence in developing scalable modules for the Enterprise CRM and demonstrating rapid technical growth.",
+            "image": "/Portfolio/Star-PerformerAkashKharat-JUNE_2022.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Star Performer Award",
+            "issuer": "Ksolves India LTD",
+            "date": "SEP-2023",
+            "description": "Recognized for integrating advanced gRPC and MQTT protocols, optimizing real-time data throughput by 40%.",
+            "image": "/Portfolio/Start-Performer-Akash-Kharat-SEP-2023.png"
+        },
+        {
+            "id": 3,
+            "title": "Rising Star Award",
+            "issuer": "Ksolves India LTD",
+            "date": "SEP-2024",
+            "description": "Honored for architectural leadership in modernizing legacy monoliths and spearheading IoT system resilience.",
+            "image": "/Portfolio/Rising-StarAkashKharat-SEP-2024.png"
+        }
+    ],
     "education": [
         {
             "degree": "Bachelor of Technology in Computer Science",
@@ -184,56 +215,90 @@
     "projects": [
         {
             "id": 1,
-            "title": "Smart Hotel PMS Modernization",
-            "type": "Featured | IoT / Microservices",
-            "challenge": "Architectural migration of a legacy monolithic PHP/Node.js codebase to scalable Microservices.",
-            "solution": "Integrated Tuya IoT OpenAPI and MQTT protocols for real-time automation of room scenes.",
-            "win": "Optimized MySQL schema to handle high-frequency IoT logs, improving response time by 25%.",
+            "title": "Enterprise Multi-Tenant CRM",
+            "type": "Microservices | Multi-Tenancy",
+            "challenge": "Building a scalable multi-tenant application where each tenant requires custom modules and localized features.",
+            "solution": "Architected a microservices-based system using React.js, Node.js, and PostgreSQL with regional data isolation.",
+            "win": "Created reusable utility functions and optimized codebases to allow seamless customization for each tenant.",
             "tech": [
-                "NestJS",
-                "Next.js",
-                "Tuya IoT",
-                "MQTT",
-                "Redis",
-                "Tailwind CSS"
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "PostgreSQL",
+                "TypeScript"
             ],
-            "hasDemo": true,
-            "snippet": "const roomStatus = await this.redis.get(`room:${id}:status`);\nif (!roomStatus) {\n  const telemetry = await this.telemetryModel.findOne({ where: { roomId: id }, order: [['createdAt', 'DESC']] });\n  // ... optimization logic\n}"
+            "hasDemo": false,
+            "snippet": ""
         },
         {
             "id": 2,
-            "title": "Multi-Tenant SaaS CRM Platform",
-            "type": "Enterprise SaaS",
-            "challenge": "Engineering a multi-tenant system with strict data isolation and regional flexibility.",
-            "solution": "Implemented dynamic Localization modules and optimized API layers for concurrent enterprise clients.",
-            "win": "Created reusable utility functions and conducted code reviews, ensuring scalable architecture.",
+            "title": "Role-Based Lead Management",
+            "type": "Microservices | Real-time",
+            "challenge": "Fragmented communication between salespersons and leads, requiring real-time SMS and call integration.",
+            "solution": "Developed microservices with Twilio and Sendgrid integration. Orchestrated with Docker for reliability.",
+            "win": "Implemented real-time push notifications using FCM, significantly improving lead engagement response times.",
             "tech": [
                 "Node.js",
-                "React.js",
                 "PostgreSQL",
-                "TypeScript",
-                "Sequelize"
+                "Docker",
+                "React.js",
+                "Twilio",
+                "FCM"
             ],
             "hasDemo": false,
             "snippet": ""
         },
         {
             "id": 3,
-            "title": "Role-Based Lead Management System",
-            "type": "Real-time Communication",
-            "challenge": "Centralizing fragmented SMS/Email/Push channels into a high-availability hub.",
-            "solution": "Integrated Twilio, SendGrid, and FCM. Orchestrated containerization using Docker.",
-            "win": "Delivered real-time push notifications for critical updates using FCM and optimized Sequelize queries.",
+            "title": "Safety Services Doc Manager",
+            "type": "Document Management | SSO",
+            "challenge": "Redefining safety industry standards with seamless document approval and Microsoft account integration.",
+            "solution": "Built a responsive React interface with Azure AD SSO and a dynamic dashboard for real-time document tracking.",
+            "win": "Synthesized design requirements into interactive styled components, improving client organizational efficiency.",
             "tech": [
-                "Docker",
-                "AWS",
-                "Twilio",
-                "SendGrid",
-                "FCM",
-                "Sequelize"
+                "React.js",
+                "Express.js",
+                "MySQL",
+                "MS Azure",
+                "FCM"
             ],
             "hasDemo": false,
             "snippet": ""
+        },
+        {
+            "id": 4,
+            "title": "Healthcare Home-Testing API",
+            "type": "E-commerce | Healthcare",
+            "challenge": "Coordinating complex logistics for home-based medical testing with real-time shipment tracking.",
+            "solution": "Developed Node.js APIs integrated with ShipEngine, ShipHero, and MyLabBox for automated order fulfillment.",
+            "win": "Researched and integrated multiple 3-party APIs, ensuring 100% visibility for patients throughout the testing lifecycle.",
+            "tech": [
+                "Node.js",
+                "Express.js",
+                "TypeScript",
+                "MySQL",
+                "Swagger"
+            ],
+            "hasDemo": false,
+            "snippet": ""
+        },
+        {
+            "id": 5,
+            "title": "Smart Hotel PMS Modernization",
+            "type": "IoT | Microservices",
+            "challenge": "Migrating a legacy monolithic PHP codebase to NestJS for real-time control of Smart TVs and HVAC.",
+            "solution": "Integrated Tuya IoT Platform and MQTT protocols to enable automated guest check-in room scenes.",
+            "win": "Architected schema migrations that improved system response time by 25% for high-frequency IoT data logging.",
+            "tech": [
+                "NestJS",
+                "TypeScript",
+                "Tuya IoT",
+                "MQTT",
+                "PostgreSQL",
+                "Redis"
+            ],
+            "hasDemo": true,
+            "snippet": "const roomStatus = await this.redis.get(`room:${id}:status`);\nif (!roomStatus) {\n  const telemetry = await this.telemetryModel.findOne({ where: { roomId: id }, order: [['createdAt', 'DESC']] });\n  // ... optimization logic\n}"
         }
     ]
 }

@@ -42,7 +42,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                         <span className="text-xs font-mono uppercase tracking-wider text-white/50">{project.type}</span>
                     </div>
                     <div className="flex items-center gap-3">
-                        <Github size={18} className="text-white/40 hover:text-white cursor-pointer" />
+                        <a href="https://github.com/A2K12" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors" title="View Code">
+                            <Github size={18} />
+                        </a>
                         {project.snippet && (
                             <Code
                                 size={18}
@@ -50,7 +52,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                                 onClick={() => setShowSnippet(!showSnippet)}
                             />
                         )}
-                        <ExternalLink size={18} className="text-white/40 hover:text-white cursor-pointer" />
+                        <a href="https://linkedin.com/in/akash-kharat-58949a135" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors" title="Live Demo">
+                            <ExternalLink size={18} />
+                        </a>
                     </div>
                 </div>
 

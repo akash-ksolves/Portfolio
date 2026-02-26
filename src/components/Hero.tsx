@@ -53,9 +53,7 @@ const Hero = () => {
                         <a
                             href={hero.resumeUrl}
                             download={hero.resumeFilename}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="glass-panel text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center border border-white/10 hover:border-white/20 transition-all gap-2"
+                            className="glass-panel text-white px-8 py-4 rounded-lg font-medium flex items-center justify-center border border-white/10 hover:border-industrial-blue/50 hover:bg-white/5 hover:scale-[1.02] transition-all gap-2"
                         >
                             Download Resume
                         </a>
